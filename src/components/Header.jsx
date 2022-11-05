@@ -1,40 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   return (
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+    <div className="mx-auto d-flex justify-content-between align-items-center my-5 fs-4  ">
+      <div className="">
+        <Link className="text-decoration-none text-dark" to={"/"}>
           Goals
-        </a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Login
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Register
-              </a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+        </Link>
+      </div>
+      <div className="d-flex justify-content-between align-items-centers gap-5">
+        <div>
+          <Link className="text-decoration-none text-dark" to={"login"}>
+            Login
+          </Link>
+        </div>
+        <div>
+          <Link className="text-decoration-none text-dark" to={"register"}>
+            Register
+          </Link>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
 
